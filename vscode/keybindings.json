@@ -1,0 +1,26 @@
+// "IntelliJ IDEA Keybindings" plugin handles almost everything. Minor updates were done.
+[
+  // Update "cmd+p" to open file + remove old "shift+cmd+o" from "IntelliJ IDEA Keybindings" plugin
+  {
+    "key": "cmd+p",
+    "command": "workbench.action.gotoSymbol"
+  },
+  {
+    "key": "shift+cmd+o",
+    "command": "-workbench.action.gotoSymbol"
+  },
+  {
+    "key": "cmd+p",
+    "command": "workbench.action.quickOpen"
+  },
+  {
+    "key": "shift+cmd+o",
+    "command": "-workbench.action.quickOpen"
+  },
+  // Also remove triggerParameterHints from "cmd+p" added by "IntelliJ IDEA Keybindings" plugin
+  {
+    "key": "cmd+p",
+    "command": "-editor.action.triggerParameterHints",
+    "when": "editorHasSignatureHelpProvider && editorTextFocus"
+  }
+]

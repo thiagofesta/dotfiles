@@ -33,6 +33,8 @@ git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 cp .zshrc ~/.zshrc
 # Make ZSH default shell
 chsh -s /bin/zsh
+# Change to ZSH shell
+/bin/zsh
 echo 'Complete!'
 
 # Installing essentials
@@ -51,7 +53,6 @@ echo 'Complete!'
 
 # Install macOS packages
 echo 'Installing macOS packages...'
-brew install cask
 brew cask install google-chrome
 brew cask install firefox
 brew cask install alfred
@@ -67,6 +68,24 @@ brew cask install vlc
 brew cask install the-unarchiver
 brew cask install whatsapp
 brew cask install yakyak
+echo 'Complete!'
+
+# Set up Finder
+echo 'Setting up Finder...'
+# Fix antialising issue on mohave (https://www.cleverfiles.com/help/mac-fonts-text-blurry.html)
+defaults write -g CGFontRenderingFontSmoothingDisabled -bool NO
+# Make hidden files visible
+defaults write com.apple.finder AppleShowAllFiles -bool YES
+# Show path bar
+defaults write com.apple.finder ShowPathbar -bool YES
+# Show status bar
+defaults write com.apple.finder ShowStatusBar -bool YES
+# Show tab view
+defaults write com.apple.finder ShowTabView -bool YES
+# Show file extensions
+defaults write NSGlobalDomain AppleShowAllExtensions -bool YES
+# Restart Finder
+killall Finder
 echo 'Complete!'
 
 # Update terminal's color

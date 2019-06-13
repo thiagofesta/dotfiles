@@ -9,7 +9,7 @@ echo 'Complete!'
 echo 'Installing and configuring Git...'
 brew install git
 git config --global user.name "Thiago Festa"
-git config --global user.email "thiagofesta@gmail.com" 
+git config --global user.email "thiagofesta@gmail.com"
 git config --global core.excludesfile $HOME/.gitignore_global
 cp .gitignore_global $HOME/.gitignore_global
 echo 'Complete!'
@@ -67,6 +67,7 @@ brew cask install visual-studio-code
 brew cask install vlc
 brew cask install the-unarchiver
 brew cask install whatsapp
+brew cask install telegram
 brew cask install yakyak
 echo 'Complete!'
 

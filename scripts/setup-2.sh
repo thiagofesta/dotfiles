@@ -26,6 +26,7 @@ killall Finder
 echo 'Complete!'
 
 # Execute installer script
+cd installer && yarn install && cd ..
 node ./installer/index.js
 
 # Update terminal's color

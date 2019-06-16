@@ -16,6 +16,6 @@ echo 'Complete!'
 
 # Copy the settings
 echo 'Copying the settings...'
-cp settings.json $HOME/Library/Application\ Support/Code/User/settings.json
-cp keybindings.json $HOME/Library/Application\ Support/Code/User/keybindings.json
+cp resources/vscode/settings.json $HOME/Library/Application\ Support/Code/User/settings.json
+cp resources/vscode/keybindings.json $HOME/Library/Application\ Support/Code/User/keybindings.json
 echo 'Complete!'

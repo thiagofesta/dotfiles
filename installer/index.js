@@ -173,4 +173,6 @@ async function askMacOSPackages() {
   if(macOSPackages && macOSPackages.packages.length > 0) {
     shell.exec(`brew cask install ${macOSPackages.packages.join(' ')}`);
   }
+
+  // ToDo: Add VSCODE
 })();

@@ -147,6 +147,11 @@ async function askMacOSPackages() {
         {
           name: 'vlc',
           checked: true
+        },
+        new inquirer.Separator(' = Development = '),
+        {
+          name: 'postman',
+          checked: true
         }
       ]
     }

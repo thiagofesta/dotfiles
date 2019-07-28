@@ -158,6 +158,52 @@ async function askMacOSPackages() {
   ]);
 }
 
+async function askVSCodePlugins() {
+  return inquirer.prompt([
+    {
+      type: 'checkbox',
+      message: 'Select the VSCode plugins to install',
+      name: 'plugins',
+      pageSize: 50,
+      choices: [
+        new inquirer.Separator(' = Essentials = '),
+        {
+          name: 'IntelliJ IDEA Key Bindings (k--kato.intellij-idea-keybindings)',
+          value: 'k--kato.intellij-idea-keybindings',
+          checked: true
+        },
+        {
+          name: 'Darcula IntelliJ Theme (trinm1709.dracula-theme-from-intellij)',
+          value: 'trinm1709.dracula-theme-from-intellij',
+          checked: true
+        },
+        {
+          name: 'EditorConfig (EditorConfig.EditorConfig)',
+          value: 'EditorConfig.EditorConfig',
+          checked: true
+        },
+        new inquirer.Separator(' = Firebase = '),
+        {
+          name: 'Firebase - Firestore Security Rules and Indexes (toba.vsfire)',
+          value: 'toba.vsfire',
+          checked: false
+        }
+      ]
+    }
+  ]);
+}
+
+async function askVSCodeConfiguration() {
+  return inquirer.prompt([
+    {
+      type: 'confirm',
+      message: 'Do you want to configure VSCode settings and keybindings?',
+      name: 'confirm',
+      default: true
+    }
+  ]);
+}
+
 (async function() {
   const gitConfiguration = await askGitConfiguration();
   if (gitConfiguration && gitConfiguration.confirm) {
@@ -179,5 +225,18 @@ async function askMacOSPackages() {
     shell.exec(`brew cask install ${macOSPackages.packages.join(' ')}`);
   }
 
-  // ToDo: Add VSCODE
+  // If installing vscode asks for installing vscode configs
+  if (macOSPackages && macOSPackages.packages.includes('visual-studio-code')) {
+    const vscodePlugins = await askVSCodePlugins();
+    if(vscodePlugins && vscodePlugins.plugins.length > 0) {
+      vscodePlugins.plugins.forEach((plugin) => {
+        shell.exec(`code --install-extension ${plugin}`);
+      });
+    }
+
+    const vscodeConfiguration = await askVSCodeConfiguration();
+    if(vscodeConfiguration && vscodeConfiguration.confirm) {
+      shell.exec(`./scripts/vscode-configuration.sh`);
+    }
+  }
 })();

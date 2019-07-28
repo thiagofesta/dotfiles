@@ -17,7 +17,7 @@ This is executed in the order bellow:
 - NVM
 - Latest Node LTS
 - Yarn
-- Configure Finder
+- Setup Finder's preferences
 
 ## How it works
 

@@ -182,6 +182,17 @@ async function askVSCodePlugins() {
           value: 'EditorConfig.EditorConfig',
           checked: true
         },
+        new inquirer.Separator(' = EmberJS = '),
+        {
+          name: 'Ember Language Server - Autocompletes',
+          value: 'emberjs.vscode-ember',
+          checked: true
+        },
+        { // This one requires configs
+          name: 'Ember Related Files - Find files easily (cmd + alt + p)',
+          value: 'josa.ember-related-files',
+          checked: true
+        },
         new inquirer.Separator(' = Firebase = '),
         {
           name: 'Firebase - Firestore Security Rules and Indexes (toba.vsfire)',

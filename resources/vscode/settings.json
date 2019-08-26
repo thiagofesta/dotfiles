@@ -98,5 +98,8 @@
   "window.zoomLevel": 0,
   "workbench.colorTheme": "Darcula Theme from IntelliJ",
   "workbench.editor.enablePreview": false,
-  "workbench.startupEditor": "none"
+  "workbench.startupEditor": "none",
+
+  // Ember related files plugin
+  "emberRelatedFiles.showQuickPickForSingleOption": true
 }

@@ -17,10 +17,69 @@
     "key": "shift+cmd+o",
     "command": "-workbench.action.quickOpen"
   },
+
   // Also remove triggerParameterHints from "cmd+p" added by "IntelliJ IDEA Keybindings" plugin
   {
     "key": "cmd+p",
     "command": "-editor.action.triggerParameterHints",
     "when": "editorHasSignatureHelpProvider && editorTextFocus"
+  },
+
+  // "cmd+home" goes to first line of the file instead of "cmd+up"
+  {
+    "key": "cmd+home",
+    "command": "cursorTop",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "cmd+up",
+    "command": "-cursorTop",
+    "when": "textInputFocus"
+  },
+
+  // "shift+cmd+home" goes to first line of the file with a selection instead of "shift+cmd+up"
+  {
+    "key": "shift+cmd+home",
+    "command": "cursorTopSelect",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "shift+cmd+up",
+    "command": "-cursorTopSelect",
+    "when": "textInputFocus"
+  },
+
+  // "cmd+end" goes to last line of the file instead of "cmd+down"
+  {
+    "key": "cmd+end",
+    "command": "cursorBottom",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "cmd+down",
+    "command": "-cursorBottom",
+    "when": "textInputFocus"
+  },
+
+  // "shift+cmd+end" goes to last line of the file with a selection instead of "shift+cmd+down"
+  {
+    "key": "shift+cmd+end",
+    "command": "cursorBottomSelect",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "shift+cmd+down",
+    "command": "-cursorBottomSelect",
+    "when": "textInputFocus"
+  },
+
+  // Ember Related Files plugin
+  {
+    "key": "alt+cmd+p",
+    "command": "extension.relatedFiles"
+  },
+  {
+    "key": "alt+cmd+r",
+    "command": "-extension.relatedFiles"
   }
 ]

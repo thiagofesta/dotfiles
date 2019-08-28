@@ -2,10 +2,6 @@
 [
   // Update "cmd+p" to open file + remove old "shift+cmd+o" from "IntelliJ IDEA Keybindings" plugin
   {
-    "key": "cmd+p",
-    "command": "workbench.action.gotoSymbol"
-  },
-  {
     "key": "shift+cmd+o",
     "command": "-workbench.action.gotoSymbol"
   },
@@ -81,5 +77,18 @@
   {
     "key": "alt+cmd+r",
     "command": "-extension.relatedFiles"
+  },
+
+  // Moving cmd+d to cmd+alt+d to duplicate line
+  {
+    "key": "alt+cmd+d",
+    "command": "editor.action.copyLinesDownAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  // Rebinding cmd+d to "Add selection to next Find match"
+  {
+    "key": "cmd+d",
+    "command": "-editor.action.copyLinesDownAction",
+    "when": "editorTextFocus && !editorReadonly"
   }
 ]

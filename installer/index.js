@@ -72,7 +72,7 @@ async function askMacOSPackages() {
   return inquirer.prompt([
     {
       type: 'checkbox',
-      message: 'Select the NPM packages to install globally',
+      message: 'Select the MacOS apps to install',
       name: 'packages',
       pageSize: 50,
       choices: [
@@ -104,8 +104,12 @@ async function askMacOSPackages() {
           checked: true
         },
         {
-          name: 'telegram',
+          name: 'signal',
           checked: true
+        },
+        {
+          name: 'telegram',
+          checked: false
         },
         {
           name: 'whatsapp',

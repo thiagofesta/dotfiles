@@ -100,6 +100,10 @@ async function askMacOSPackages() {
         },
         new inquirer.Separator(' = Communication = '),
         {
+          name: 'discord',
+          checked: true
+        },
+        {
           name: 'slack',
           checked: true
         },
@@ -117,6 +121,10 @@ async function askMacOSPackages() {
         },
         {
           name: 'yakyak',
+          checked: false
+        },
+        {
+          name: 'zoomus',
           checked: true
         },
         new inquirer.Separator(' = Essentials = '),
@@ -125,11 +133,19 @@ async function askMacOSPackages() {
           checked: true
         },
         {
-          name: 'alfred',
+          name: 'adobe-creative-cloud',
           checked: true
         },
         {
+          name: 'alfred',
+          checked: false
+        },
+        {
           name: 'dropbox',
+          checked: false
+        },
+        {
+          name: 'microsoft-office',
           checked: true
         },
         {
@@ -145,6 +161,10 @@ async function askMacOSPackages() {
           checked: true
         },
         {
+          name: 'synology-drive',
+          checked: true
+        },
+        {
           name: 'the-unarchiver',
           checked: true
         },
@@ -156,7 +176,61 @@ async function askMacOSPackages() {
         {
           name: 'postman',
           checked: true
-        }
+        },
+        {
+          name: 'zeplin',
+          checked: true
+        },
+        new inquirer.Separator(' = Gaming Clients = '),
+        {
+          name: 'battle-net',
+          checked: true
+        },
+        {
+          name: 'epic-games',
+          checked: true
+        },
+        {
+          name: 'origin',
+          checked: true
+        },
+        {
+          name: 'steam',
+          checked: true
+        },
+        new inquirer.Separator(' = Games = '),
+        {
+          name: 'minecraft',
+          checked: false
+        },
+        new inquirer.Separator(' = Gaming Related = '),
+        {
+          name: 'streamlabs-obs',
+          checked: true
+        },
+        new inquirer.Separator(' = VPN = '),
+        {
+          name: 'tunnelbear',
+          checked: false
+        },
+        {
+          name: 'tunnelblick',
+          checked: false
+        },
+        new inquirer.Separator(' = File Manager = '),
+        {
+          name: 'android-file-transfer',
+          checked: false
+        },
+        {
+          name: 'omnidisksweeper',
+          checked: false
+        },
+        new inquirer.Separator(' = Finance = '),
+        {
+          name: 'gnucash',
+          checked: false
+        },
       ]
     }
   ]);

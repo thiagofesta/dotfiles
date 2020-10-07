@@ -21,6 +21,8 @@ defaults write com.apple.finder ShowStatusBar -bool YES
 defaults write com.apple.finder ShowTabView -bool YES
 # Show file extensions
 defaults write NSGlobalDomain AppleShowAllExtensions -bool YES
+# Disable writing .DS_Store files on network drivers
+defaults write com.apple.desktopservices DSDontWriteNetworkStores true
 # Restart Finder
 killall Finder
 echo 'Complete!'

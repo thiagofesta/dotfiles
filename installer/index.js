@@ -149,6 +149,10 @@ async function askMacOSPackages() {
           checked: true
         },
         {
+          name: 'monitorcontrol',
+          checked: true
+        },
+        {
           name: 'recordit',
           checked: true
         },

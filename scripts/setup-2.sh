@@ -19,6 +19,18 @@ defaults write com.apple.finder ShowPathbar -bool YES
 defaults write com.apple.finder ShowStatusBar -bool YES
 # Show tab view
 defaults write com.apple.finder ShowTabView -bool YES
+
+# New window target
+# Computer     : `PfCm`
+# Volume       : `PfVo`
+# $HOME        : `PfHm`
+# Desktop      : `PfDe`
+# Documents    : `PfDo`
+# All My Files : `PfAF`
+# Other…       : `PfLo`
+defaults write com.apple.finder NewWindowTarget -string 'PfHm'
+#defaults write com.apple.finder NewWindowTargetPath -string "file://${HOME}/"
+
 # Show file extensions
 defaults write NSGlobalDomain AppleShowAllExtensions -bool YES
 # Disable writing .DS_Store files on network drivers

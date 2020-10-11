@@ -145,6 +145,10 @@ async function askMacOSPackages() {
           checked: false
         },
         {
+          name: 'free-download-manager',
+          checked: true
+        },
+        {
           name: 'microsoft-office',
           checked: true
         },

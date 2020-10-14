@@ -1,0 +1,9 @@
+title: Thiago's Dotfiles
+description: A set of dotfiles to startup a new MacOS machine
+baseurl: "/dotfiles"
+url: "http://thiagofesta.com"
+remote_theme: pmarsceill/just-the-docs
+# search_enabled: false
+permalink: pretty
+
+# https://github.com/pmarsceill/just-the-docs/blob/master/_config.yml

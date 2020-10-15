@@ -3,6 +3,7 @@ layout: default
 title: B
 parent: System
 permalink: /system/b
+nav_order: 2
 ---
 
 # System b

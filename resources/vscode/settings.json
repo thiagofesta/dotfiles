@@ -12,8 +12,12 @@
   "explorer.openEditors.visible": 0,
   // "explorer.autoReveal": false,
   "files.autoSave": "onWindowChange",
+  "files.associations": {
+    "*.tl": "dustjs"
+  },
   "files.exclude": {
     "**/.DS_Store": true,
+    "**/.gradle": true,
     "**/*.a": true,
     "**/*.class": true,
     "**/*.db": true,
@@ -24,16 +28,17 @@
     "**/*.fabric": true,
     "**/*.git": true,
     "**/*.gitkeep": true,
-    "**/.gradle": true,
     "**/*.hg": true,
     "**/*.idb": true,
     "**/*.jar": true,
-    "**/*.js": {"when": "$(basename).ts"},
+    "**/*.js": {
+      "when": "$(basename).ts"
+    },
     "**/*.lib": true,
     "**/*.map": true,
     "**/*.ncb": true,
-    "**/*.obj": true,
     "**/*.o": true,
+    "**/*.obj": true,
     "**/*.pdb": true,
     "**/*.psd": true,
     "**/*.pyc": true,
@@ -43,9 +48,9 @@
     "**/*.src": true,
     "**/*.suo": true,
     "**/*.svn": true,
-    "**/CVS": true,
     "**/bower_components": true,
     "**/build": true,
+    "**/CVS": true,
     "**/dist": true,
     "**/node_modules": true,
     "**/tmp": true
@@ -99,7 +104,7 @@
   "workbench.colorTheme": "Darcula Theme from IntelliJ",
   "workbench.editor.enablePreview": false,
   "workbench.startupEditor": "none",
-
+  "javascript.implicitProjectConfig.experimentalDecorators": true,
   // Ember related files plugin
   "emberRelatedFiles.showQuickPickForSingleOption": true
 }

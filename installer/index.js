@@ -169,6 +169,10 @@ async function askMacOSPackages() {
           checked: true
         },
         {
+          name: 'synologyassistant',
+          checked: true
+        },
+        {
           name: 'synology-drive',
           checked: true
         },
